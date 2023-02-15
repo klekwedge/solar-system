@@ -1,17 +1,27 @@
 import { Box } from '@chakra-ui/react';
 import './Planet.scss';
 
-function Planet() {
+interface PlanetProps {
+  size: number;
+  orbitalSpeed: number;
+  orbitDimensions: number;
+  speedAroundAxis: number;
+  backgroundColor: string;
+}
+
+function Planet({ size, orbitalSpeed, orbitDimensions, speedAroundAxis, backgroundColor }: PlanetProps) {
   return (
-    <>
-      <div id="galaxy">
-        <div id="sun" />
-      </div>
-      <div className="orbit" id="mercury">
-        <div className="planet" />
-        {/* <Box className="planet" w="50px" h="50px" backgroundColor="#537FE7" borderRadius="50%" /> */}
-      </div>
-    </>
+    <Box
+      className="orbit"
+      id="mercury"
+      w={`${orbitDimensions}em`}
+      h={`${orbitDimensions}em`}
+      mt={`-${orbitDimensions / 2}em`}
+      ml={`-${orbitDimensions / 2}em`}
+      animation={`orbitAnim ${orbitalSpeed}s`}
+    >
+      <Box className="planet" />
+    </Box>
   );
 }
 

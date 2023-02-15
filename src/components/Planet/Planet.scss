@@ -1,6 +1,4 @@
 #galaxy {
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -18,6 +16,10 @@
 .planet {
   margin-top: -0.5em;
   margin-left: -0.5em;
+}
+
+#mercury {
+  font-size: 4em;
 }
 
 #sun {
@@ -46,7 +48,6 @@
   animation-timing-function: linear;
 }
 
-/* Animations */
 @keyframes orbitAnim {
   0% {
     transform: rotateZ(0deg);
@@ -56,36 +57,21 @@
   }
 }
 
-/* Orbit sizes */
-#mercury.orbit {
-  width: 12em;
-  height: 12em;
-  margin-top: -6em;
-  margin-left: -6em;
-}
-
-/* Planet starting positions */
-#mercury .planet {
-  left: 50%;
-  top: -1%;
-  background-color: #537FE7;
-}
-
-/* Planet animation durations */
-#mercury.orbit {
-  animation-duration: 10s;
-}
-
-/* Planet sizes */
 #sun {
   font-size: 24em;
 }
 
 #mercury {
-  font-size: 4em;
+  // font-size: 4em;
+  // width: 4em;
+  // height: 4em;
 }
 
+
 #mercury .planet {
+  left: 50%;
+  top: -1%;
+  background-color: #537FE7;
   animation-name: rotateAnim;
   animation-duration: 3s;
 }
