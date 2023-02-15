@@ -1,5 +1,7 @@
 import { Flex } from '@chakra-ui/react';
+import { v4 as uuidv4 } from 'uuid';
 import Planet from '../Planet/Planet';
+import planets from '../../data';
 import Sun from '../Sun/Sun';
 
 function System() {
@@ -8,9 +10,16 @@ function System() {
       <div id="galaxy">
         <div id="sun" />
       </div>
-      <Planet radius={3} orbitalSpeed={10} speedAroundAxis={3} planetColor="#2fdc08" orbitDimensions={12} />
-      <Planet radius={4} orbitalSpeed={5} speedAroundAxis={3} planetColor="#537FE7" orbitDimensions={12} />
-      <Planet radius={5} orbitalSpeed={15} speedAroundAxis={3} planetColor="#ed23d2" orbitDimensions={12} />
+      {planets.map((planet) => (
+        <Planet
+          key={uuidv4()}
+          radius={planet.radius}
+          orbitalSpeed={planet.orbitalSpeed}
+          orbitDimensions={planet.orbitDimensions}
+          speedAroundAxis={planet.speedAroundAxis}
+          planetColor={planet.planetColor}
+        />
+      ))}
     </Flex>
   );
 }
