@@ -8,7 +8,9 @@ function System() {
       <div id="galaxy">
         <div id="sun" />
       </div>
-      <Planet size={4} orbitalSpeed={10} speedAroundAxis={20} backgroundColor="blue" orbitDimensions={12} />
+      <Planet radius={3} orbitalSpeed={10} speedAroundAxis={3} planetColor="#2fdc08" orbitDimensions={12} />
+      <Planet radius={4} orbitalSpeed={5} speedAroundAxis={3} planetColor="#537FE7" orbitDimensions={12} />
+      <Planet radius={5} orbitalSpeed={15} speedAroundAxis={3} planetColor="#ed23d2" orbitDimensions={12} />
     </Flex>
   );
 }
