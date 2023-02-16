@@ -6,9 +6,10 @@ interface PlanetProps {
   orbitDimensions: number;
   speedAroundAxis: number;
   planetImg: string;
+  size: number;
 }
 
-function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg }: PlanetProps) {
+function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, size }: PlanetProps) {
   return (
     <Box
       className="orbit"
@@ -25,8 +26,8 @@ function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg }: P
         top="0"
         animation={`rotateAnim ${speedAroundAxis}s linear 0s infinite`}
         src={planetImg}
-        w="70px"
-        h="70px"
+        w={`${size}px`}
+        h={`${size}px`}
       />
     </Box>
   );

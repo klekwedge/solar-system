@@ -3,4 +3,5 @@ export interface IPlanet {
   orbitDimensions: number;
   speedAroundAxis: number;
   planetImg: string;
+  size: number;
 }
