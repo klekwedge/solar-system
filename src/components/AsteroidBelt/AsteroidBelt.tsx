@@ -1,19 +1,18 @@
-import { Box, Image, Flex } from '@chakra-ui/react';
-import { useEffect, useRef } from 'react';
+import { Box, Image } from '@chakra-ui/react';
 import { v4 as uuidv4 } from 'uuid';
 
 interface AsteroidBeltProps {
+  radius: number;
   orbitalSpeed: number;
   orbitDimensions: number;
-  speedAroundAxis: number;
 }
 
-function AsteroidBelt({ orbitalSpeed, orbitDimensions, speedAroundAxis }: AsteroidBeltProps) {
-  function getRandom() {
-    const radius = 1048;
+function AsteroidBelt({ radius, orbitalSpeed, orbitDimensions }: AsteroidBeltProps) {
+  function getRandomCoord() {
+    // const radius = 1048;
 
-    const x0 = 1048;
-    const y0 = 1048;
+    const x0 = radius;
+    const y0 = radius;
 
     const x = Math.floor(Math.random() * (radius + 1));
     const y = Math.floor(Math.sqrt(radius ** 2 - (x - x0) ** 2) + y0);
@@ -48,17 +47,16 @@ function AsteroidBelt({ orbitalSpeed, orbitDimensions, speedAroundAxis }: Astero
     return styles;
   }
 
-  const asteroids = new Array(10).fill(1).map((item) => getRandom());
+  const asteroids = new Array(100).fill(1).map((item) => getRandomCoord());
 
   return (
     <Box
-      //   ref={orbitRef}
       className="asteroid-orbit"
       w={`${orbitDimensions}em`}
       h={`${orbitDimensions}em`}
       mt={`-${orbitDimensions / 2}em`}
       ml={`-${orbitDimensions / 2}em`}
-      //   animation={`orbitAnim ${orbitalSpeed}s linear 0s infinite`}
+      animation={`orbitAnim ${orbitalSpeed}s linear 0s infinite`}
     >
       {asteroids.map((styles) => (
         <Image

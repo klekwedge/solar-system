@@ -1,6 +1,6 @@
 import { IPlanet } from '../types';
 
-const orbitalSpeedCoef = 20;
+const orbitalSpeedCoef = 10;
 const speedAroundAxisCoef = 24;
 
 const Planets: IPlanet[] = [
@@ -30,31 +30,31 @@ const Planets: IPlanet[] = [
   },
   {
     orbitalSpeed: 9 - 13.07 / orbitalSpeedCoef,
-    orbitDimensions: 80,
+    orbitDimensions: 110,
     speedAroundAxis: 5 + 9 / orbitalSpeedCoef,
     planetImg: '/img/jupiter.png',
   },
   {
     orbitalSpeed: 9 - 9.69 / orbitalSpeedCoef,
-    orbitDimensions: 90,
+    orbitDimensions: 120,
     speedAroundAxis: 5 + 10 / orbitalSpeedCoef,
     planetImg: '/img/saturn.png',
   },
   {
     orbitalSpeed: 9 - 6.81 / orbitalSpeedCoef,
-    orbitDimensions: 100,
+    orbitDimensions: 130,
     speedAroundAxis: 5 + 17 / orbitalSpeedCoef,
     planetImg: '/img/uranus.png',
   },
   {
     orbitalSpeed: 9 - 5.43 / orbitalSpeedCoef,
-    orbitDimensions: 110,
+    orbitDimensions: 140,
     speedAroundAxis: 5 + 16 / orbitalSpeedCoef,
     planetImg: '/img/neptune.png',
   },
   {
     orbitalSpeed: 9 - 4.66 / orbitalSpeedCoef,
-    orbitDimensions: 120,
+    orbitDimensions: 150,
     speedAroundAxis: 5 + 154 / orbitalSpeedCoef,
     planetImg: '/img/pluto.png',
   },
