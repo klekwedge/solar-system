@@ -19,7 +19,7 @@
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  // transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .asteroid-orbit {
@@ -31,25 +31,24 @@
 
 @keyframes orbitAnimNotClockwise {
   0% {
-    transform: rotateZ(0deg);
+    transform: translate(-50%, -50%) rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(-360deg);
+    transform: translate(-50%, -50%) rotateZ(-360deg);
   }
 }
 
 @keyframes orbitAnimClockwise {
   0% {
-    transform: rotateZ(0deg);
+    transform: translate(-50%, -50%) rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
 
 .planet {
-  position: relative;
-  transform: translateY(-50%);
+  position: absolute;
 }
 
 @keyframes rotateAnim {
