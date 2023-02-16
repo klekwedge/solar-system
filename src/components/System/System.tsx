@@ -9,17 +9,17 @@ function System() {
     <Flex w="100vw" h="100vh" justifyContent="center" alignItems="center">
       <div id="galaxy">
         <div id="sun" />
+        {planets.map((planet) => (
+          <Planet
+            key={uuidv4()}
+            radius={planet.radius}
+            orbitalSpeed={planet.orbitalSpeed}
+            orbitDimensions={planet.orbitDimensions}
+            speedAroundAxis={planet.speedAroundAxis}
+            planetImg={planet.planetImg}
+          />
+        ))}
       </div>
-      {planets.map((planet) => (
-        <Planet
-          key={uuidv4()}
-          radius={planet.radius}
-          orbitalSpeed={planet.orbitalSpeed}
-          orbitDimensions={planet.orbitDimensions}
-          speedAroundAxis={planet.speedAroundAxis}
-          planetColor={planet.planetColor}
-        />
-      ))}
     </Flex>
   );
 }

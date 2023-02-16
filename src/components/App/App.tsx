@@ -1,11 +1,7 @@
 import System from '../System/System';
 
 function App() {
-  return (
-    <div>
-      <System />
-    </div>
-  );
+  return <System />;
 }
 
 export default App;
