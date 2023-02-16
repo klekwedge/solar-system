@@ -5,8 +5,6 @@ function App() {
   return (
     <Box overflow='hidden'>
       <System />
-      <div className="stars" />
-      <div className="twinkling" />
     </Box>
   );
 }

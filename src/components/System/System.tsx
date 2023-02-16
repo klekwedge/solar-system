@@ -7,6 +7,8 @@ import Sun from '../Sun/Sun';
 function System() {
   return (
     <Flex w="100vw" h="100vh" justifyContent="center" alignItems="center">
+      <div className="stars" />
+      <div className="twinkling" />
       <div id="galaxy">
         <Sun />
         {planets.map((planet) => (
