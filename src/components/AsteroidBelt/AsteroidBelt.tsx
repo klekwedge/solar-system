@@ -2,14 +2,13 @@ import { Box, Image } from '@chakra-ui/react';
 import { v4 as uuidv4 } from 'uuid';
 
 interface AsteroidBeltProps {
-  radius: number;
   orbitalSpeed: number;
   orbitDimensions: number;
 }
 
-function AsteroidBelt({ radius, orbitalSpeed, orbitDimensions }: AsteroidBeltProps) {
+function AsteroidBelt({ orbitalSpeed, orbitDimensions }: AsteroidBeltProps) {
   function getRandomCoord() {
-    // const radius = 1048;
+    const radius = orbitDimensions * 8;
 
     const x0 = radius;
     const y0 = radius;

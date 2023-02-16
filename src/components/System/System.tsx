@@ -10,9 +10,9 @@ function System() {
     <Flex w="100vw" h="100vh" justifyContent="center" alignItems="center">
       <div className="stars" />
       <div className="twinkling" />
-      <AsteroidBelt radius={720} orbitalSpeed={30} orbitDimensions={90} />
-      <AsteroidBelt radius={1360} orbitalSpeed={30} orbitDimensions={170} />
       <div id="galaxy">
+        <AsteroidBelt orbitalSpeed={30} orbitDimensions={90} />
+        <AsteroidBelt orbitalSpeed={30} orbitDimensions={170} />
         <Sun />
         {planets.map((planet) => (
           <Planet

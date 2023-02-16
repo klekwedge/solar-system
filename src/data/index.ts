@@ -1,6 +1,6 @@
 import { IPlanet } from '../types';
 
-const orbitalSpeedCoef = 10;
+const orbitalSpeedCoef = 20;
 const speedAroundAxisCoef = 24;
 
 const Planets: IPlanet[] = [
