@@ -4,4 +4,5 @@ export interface IPlanet {
   speedAroundAxis: number;
   planetImg: string;
   size: number;
+  isClockwise: boolean;
 }

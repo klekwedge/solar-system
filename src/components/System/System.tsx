@@ -22,6 +22,7 @@ function System() {
             speedAroundAxis={planet.speedAroundAxis}
             planetImg={planet.planetImg}
             size={planet.size}
+            isClockwise={planet.isClockwise}
           />
         ))}
       </div>

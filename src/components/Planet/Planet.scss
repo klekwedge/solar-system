@@ -29,12 +29,21 @@
   left: 50%;
 }
 
-@keyframes orbitAnim {
+@keyframes orbitAnimNotClockwise {
   0% {
     transform: rotateZ(0deg);
   }
   100% {
     transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes orbitAnimClockwise {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 

@@ -11,6 +11,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 58,
     planetImg: '/img/mercury.png',
     size: 70,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 35.02 / orbitalSpeedCoef,
@@ -18,6 +19,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 243,
     planetImg: '/img/venus.png',
     size: 80,
+    isClockwise: true,
   },
   {
     orbitalSpeed: 9 - 26.71 / orbitalSpeedCoef,
@@ -25,6 +27,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 24 / orbitalSpeedCoef,
     planetImg: '/img/earth.png',
     size: 80,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 24.13 / orbitalSpeedCoef,
@@ -32,6 +35,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 24 / orbitalSpeedCoef,
     planetImg: '/img/mars.png',
     size: 75,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 13.07 / orbitalSpeedCoef,
@@ -39,6 +43,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 9 / orbitalSpeedCoef,
     planetImg: '/img/jupiter.png',
     size: 150,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 9.69 / orbitalSpeedCoef,
@@ -46,6 +51,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 10 / orbitalSpeedCoef,
     planetImg: '/img/saturn.png',
     size: 130,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 6.81 / orbitalSpeedCoef,
@@ -53,6 +59,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 17 / orbitalSpeedCoef,
     planetImg: '/img/uranus.png',
     size: 100,
+    isClockwise: true,
   },
   {
     orbitalSpeed: 9 - 5.43 / orbitalSpeedCoef,
@@ -60,6 +67,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 16 / orbitalSpeedCoef,
     planetImg: '/img/neptune.png',
     size: 90,
+    isClockwise: false,
   },
   {
     orbitalSpeed: 9 - 4.66 / orbitalSpeedCoef,
@@ -67,6 +75,7 @@ const Planets: IPlanet[] = [
     speedAroundAxis: 5 + 154 / orbitalSpeedCoef,
     planetImg: '/img/pluto.png',
     size: 70,
+    isClockwise: false,
   },
 ];
 

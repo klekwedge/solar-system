@@ -7,9 +7,10 @@ interface PlanetProps {
   speedAroundAxis: number;
   planetImg: string;
   size: number;
+  isClockwise: boolean;
 }
 
-function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, size }: PlanetProps) {
+function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, size, isClockwise }: PlanetProps) {
   return (
     <Box
       className="orbit"
@@ -17,7 +18,11 @@ function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, siz
       h={`${orbitDimensions}em`}
       mt={`-${orbitDimensions / 2}em`}
       ml={`-${orbitDimensions / 2}em`}
-      animation={`orbitAnim ${orbitalSpeed}s linear 0s infinite`}
+      animation={
+        isClockwise
+          ? `orbitAnimClockwise ${orbitalSpeed}s linear 0s infinite`
+          : `orbitAnimNotClockwise ${orbitalSpeed}s linear 0s infinite`
+      }
     >
       <Image
         className="planet"
