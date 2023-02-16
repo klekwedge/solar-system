@@ -3,7 +3,6 @@
 }
 
 #sun {
-  background-color: #fb7209;
   position: absolute;
   width: 20em;
   height: 20em;
@@ -16,7 +15,7 @@
 
 .orbit {
   position: absolute;
-  border: 10px solid #c3cfe9;
+  border: 8px solid #ffffff;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -25,13 +24,12 @@
 
 @keyframes orbitAnim {
   0% {
-    transform: rotate(0deg);
+    transform: rotateZ(0deg);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotateZ(-360deg);
   }
 }
-
 
 .planet {
   position: relative;
@@ -44,5 +42,39 @@
   }
   100% {
     transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.stars {
+  background: #000 url(/img/stars.png) repeat top center;
+  z-index: -10;
+}
+
+.twinkling {
+  background: transparent url(/img/twinkling.png) repeat top center;
+  z-index: -10;
+  animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
   }
 }

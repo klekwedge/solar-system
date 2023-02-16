@@ -8,11 +8,10 @@ function System() {
   return (
     <Flex w="100vw" h="100vh" justifyContent="center" alignItems="center">
       <div id="galaxy">
-        <div id="sun" />
+        <Sun />
         {planets.map((planet) => (
           <Planet
             key={uuidv4()}
-            radius={planet.radius}
             orbitalSpeed={planet.orbitalSpeed}
             orbitDimensions={planet.orbitDimensions}
             speedAroundAxis={planet.speedAroundAxis}

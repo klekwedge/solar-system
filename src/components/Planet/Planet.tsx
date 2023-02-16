@@ -2,14 +2,13 @@ import { Box, Image } from '@chakra-ui/react';
 import './Planet.scss';
 
 interface PlanetProps {
-  radius: number;
   orbitalSpeed: number;
   orbitDimensions: number;
   speedAroundAxis: number;
   planetImg: string;
 }
 
-function Planet({ radius, orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg }: PlanetProps) {
+function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg }: PlanetProps) {
   return (
     <Box
       className="orbit"

@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 
 function Sun() {
-  return <Box w="50px" h="50px" backgroundColor="#FFED01" borderRadius="50%" />;
+  return <Image id="sun" src="/public/img/sun.png" />;
 }
 
 export default Sun;
