@@ -23,7 +23,7 @@ function AsteroidBelt({ orbitalSpeed, orbitDimensions }: AsteroidBeltProps) {
           style={{
             ...styles,
           }}
-          src="/public/img/meteorite.png"
+          src="/img/meteorite.png"
           w="50px"
           h="50px"
           position="absolute"
