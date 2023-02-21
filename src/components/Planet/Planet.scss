@@ -51,14 +51,21 @@
   position: absolute;
 }
 
-// @keyframes rotateAnim {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
+.animate {
+  transform: rotate(180deg) !important;
+  transition: all 5s ease;
+  // transition-property: transform;
+  // transition-duration: 9s;
+}
+
+@keyframes rotateAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 body {
   overflow-y: hidden;
