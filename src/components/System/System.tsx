@@ -11,8 +11,8 @@ function System() {
       <div className="stars" />
       <div className="twinkling" />
       <div id="galaxy">
-        <AsteroidBelt orbitalSpeed={30} orbitDimensions={90} />
-        <AsteroidBelt orbitalSpeed={30} orbitDimensions={190} />
+        <AsteroidBelt orbitalSpeed={30} orbitDimensions={60} />
+        <AsteroidBelt orbitalSpeed={30} orbitDimensions={120} />
         <Sun />
         {planets.map((planet) => (
           <Planet

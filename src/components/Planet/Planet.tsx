@@ -1,6 +1,6 @@
 import { Box, Image, keyframes } from '@chakra-ui/react';
-import { useEffect, useRef, useState } from 'react';
-import getRandomCoord, { getStandardCoord } from '../../hooks/useRandomCoord';
+import { useEffect, useState } from 'react';
+import { getStandardCoord } from '../../hooks/useRandomCoord';
 import './Planet.scss';
 
 interface PlanetProps {
@@ -11,7 +11,6 @@ interface PlanetProps {
   size: number;
   isClockwise: boolean;
 }
-
 
 function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, size, isClockwise }: PlanetProps) {
   const [coord, setCoord] = useState(getStandardCoord());
@@ -29,7 +28,6 @@ function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, siz
     return () => clearInterval(interval);
   }, []);
 
-
   return (
     <Box
       className="orbit"
@@ -43,9 +41,11 @@ function Planet({ orbitalSpeed, orbitDimensions, speedAroundAxis, planetImg, siz
     >
       <Image
         className="planet"
-        style={{ ...coord,
+        style={{
+          ...coord,
           transition: `${speedAroundAxis}s linear 0s infinite`,
-          transform: `${coord?.transform} rotate(${(deg)}deg)` }}
+          transform: `${coord?.transform} rotate(${deg}deg)`,
+        }}
         // animation={`rotateAnim ${speedAroundAxis}s linear 0s infinite`}
         src={planetImg}
         w={`${size}px`}
